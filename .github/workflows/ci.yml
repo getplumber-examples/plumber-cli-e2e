@@ -1,0 +1,11 @@
+# ISSUE-203: step debug logging turned on in the workflow.
+name: ci
+on: push
+permissions: {}
+env:
+  ACTIONS_STEP_DEBUG: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo build
