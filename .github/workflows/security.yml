@@ -1,0 +1,11 @@
+# ISSUE-410: a security job (matches `*trivy*`) that can fail without failing
+# the run.
+name: security
+on: push
+permissions: {}
+jobs:
+  trivy-scan:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - run: trivy fs --exit-code 1 .
