@@ -1,0 +1,11 @@
+# ISSUE-309: the whole secrets context exported to one step.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          ALL_SECRETS: ${{ toJson(secrets) }}
+        run: echo "$ALL_SECRETS" > /tmp/secrets.json
