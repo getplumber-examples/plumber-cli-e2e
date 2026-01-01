@@ -1,0 +1,9 @@
+# ISSUE-411: a remote script piped into a shell.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -sSL https://get.example.com/install.sh | bash
