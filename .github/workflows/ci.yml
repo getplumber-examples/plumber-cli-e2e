@@ -1,0 +1,9 @@
+# ISSUE-803: every scope granted to the token.
+name: ci
+on: push
+permissions: write-all
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo build
