@@ -1,0 +1,9 @@
+# ISSUE-302: a call to the repository's own reusable workflow passes every
+# secret with `secrets: inherit`. The callee is local, so nothing is fetched.
+name: caller
+on: push
+permissions: {}
+jobs:
+  call:
+    uses: ./.github/workflows/reusable.yml
+    secrets: inherit
