@@ -1,0 +1,12 @@
+# ISSUE-102: a container image on a forbidden tag. The row's config turns off
+# the digest check, so ISSUE-103 stays quiet.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: node:latest
+    steps:
+      - run: node --version
