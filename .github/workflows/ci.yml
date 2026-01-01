@@ -1,0 +1,10 @@
+# ISSUE-505: the row's config requires code owner approval on protected
+# branches, which the fixture repository's main doesn't.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo build
