@@ -1,0 +1,9 @@
+# ISSUE-715: the repository is itself an action, and it decodes a payload and
+# runs it.
+name: install
+description: E2E fixture for ISSUE-715
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: echo "ZWNobyBoZWxsbwo=" | base64 -d | sh
