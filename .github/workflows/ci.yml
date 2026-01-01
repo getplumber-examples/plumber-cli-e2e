@@ -1,0 +1,8 @@
+# ISSUE-801: no `permissions:` block, so the token gets the repository default.
+name: ci
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo build
