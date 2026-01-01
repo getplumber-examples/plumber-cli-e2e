@@ -1,0 +1,11 @@
+# ISSUE-103: a container image on a version tag, not pinned by digest.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: node:22
+    steps:
+      - run: node --version
