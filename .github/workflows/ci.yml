@@ -1,0 +1,9 @@
+# ISSUE-417: the row's config requires an action no workflow references.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo build
