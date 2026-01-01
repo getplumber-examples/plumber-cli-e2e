@@ -1,0 +1,11 @@
+# ISSUE-209: an issue title, set by anyone, written to $GITHUB_ENV.
+name: triage
+on:
+  issues:
+    types: [opened]
+permissions: {}
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "TITLE=${{ github.event.issue.title }}" >> "$GITHUB_ENV"
