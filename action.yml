@@ -1,0 +1,9 @@
+# ISSUE-714: the repository is itself an action, and it runs a script fetched
+# from a mutable branch with no checksum.
+name: install
+description: E2E fixture for ISSUE-714
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: curl -sSL https://raw.githubusercontent.com/example/tool/main/install.sh | sh
