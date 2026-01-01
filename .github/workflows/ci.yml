@@ -1,0 +1,9 @@
+# ISSUE-501: the row's config requires this branch, which is not protected, to be.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo build
