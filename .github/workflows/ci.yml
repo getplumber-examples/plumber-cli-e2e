@@ -1,0 +1,9 @@
+# ISSUE-423: broken.yml next to this file is not valid YAML.
+name: ci
+on: push
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo build

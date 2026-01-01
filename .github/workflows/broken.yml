@@ -1,0 +1,6 @@
+# ISSUE-423: an unclosed flow sequence, so the file does not parse.
+name: broken
+on: [push
+jobs:
+  build:
+    runs-on: ubuntu-latest
