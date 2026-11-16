@@ -1,6 +1,8 @@
 # plumber-cli-e2e
 
 E2E fixtures for https://github.com/getplumber/plumber. Not a real project.
-One branch per ISSUE code. The content of each branch is generated from
-`v1/test/testdata/e2e/github/<case>/` in the plumber repository by
-`v1/test/testdata/e2e/sync.sh`: edit it there, never here.
+
+Each `issue-<number>` branch raises one ISSUE code, and the e2e tests of
+plumber (`v1/test/e2e`, `TestGitHubIssue<number>`) analyze it. The branches are the
+fixtures: edit them here, then refresh the matching golden files in plumber
+(`v1/test/e2e/testdata/github/golden/`).
